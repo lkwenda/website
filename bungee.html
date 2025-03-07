@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Bungee Lab</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="projects.html">Projects</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Bungee Lab Project -->
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h2 style="text-align: center;">Bungee: Engineering the Perfect Fall</h2>
+
+                    <img src="images/Bungee/bear.jpg" alt="Bungee Lab Experiment Setup" style="display: block; margin: auto;"> 
+
+                    <hr>
+                    <h3 class="page-subtitle">Introduction</h3>
+                    <div class="project-description">
+                        <p>
+                            The purpose of this lab was to maximize the displacement of a jumper using a bungee cord constructed from string and rubber bands given the height of the drop, maximum allowable acceleration interval during the entire fall, and mass of the jumper. 
+                            We report the results of the experiment and how we arrived at our bungee configuration from characterizing the rubber bands, collecting acceleration data, and deriving an appropriate model from our calculations.
+                        </p>
+                    </div>
+
+                    <h3 class="subtitle">Rubber Band Characterization</h3>
+                    <div class="project-section">
+                        <p>
+                            We conducted MTS tests of varied rubber band configurations, focusing on even-numbered values of rubber bands in series and parallel. 
+                            Using this data, we determined cubic models of best fit for each dataset and derived equations to normalize displacement calculations.
+                            The normalized force equation was then compared to the original data sets to ensure validity.
+                        </p>
+                        <p>
+                            In our calculations, <strong>P</strong> represents the number of rubber bands in parallel, while <strong>S</strong> represents the number in series. 
+                            We derived the following equation to model the force-extension relationship of the rubber bands:
+                        </p>
+                        <p style="text-align: center; font-weight: bold;">
+                            F<sub>actual</sub> = c * P * F<sub>norm</sub>(x / S)
+                        </p>
+                        <p>
+                            Where F<sub>norm</sub>(x) is given by:
+                        </p>
+                        <p style="text-align: center; font-weight: bold;">
+                            F<sub>norm</sub>(x) = 322.7883x³ - 153.8337x² + 38.8496x + 0.2610
+                        </p>
+                        <img src="images/Bungee/normalizedplot.png" alt="Rubber Band Test" style="max-width: 50%; display: block; margin: 20px auto;">
+                    </div>
+
+                    <h3 class="subtitle">Using the Accelerometer</h3>
+                    <p>
+                        We measured acceleration during free fall using an Arduino, Adafruit shield, accelerometer, and SD card. Our initial configuration consisted of 15 rubber bands, each paired in series and parallel. Acceleration data was gathered at a frequency of 400Hz and refined for better accuracy.
+                    </p>
+
+                    <h3 class="subtitle">Mathematical Modeling</h3>
+                    <p>
+                        We created a MATLAB function that takes mass, height, and max acceleration as inputs to predict the optimal bungee cord configuration. Using energy balance equations, we integrated the force-extension curve to determine maximum displacement. The model tested multiple configurations to identify the one that stayed within acceleration constraints while maximizing fall distance.
+                    </p>
+
+                    <h3 class="subtitle">Results and Analysis</h3>
+                    <p>
+                        Our model suggested 17 rubber bands in series and 5 in parallel as the optimal setup. However, real-world test results showed a slight discrepancy, as the system did not reach the expected maximum acceleration due to underestimated stiffness. Future improvements could incorporate loss factors at a molecular level for better accuracy.
+                    <p>
+                        Stay tuned! Exciting video and detailed write-up documentation are on their way!
+                    </p>
+
+                    <div class="project-navigation" style="display: flex; justify-content: space-between;">
+                        <a href="stirlingengine.html" class="button">Stirling Engine</a>
+                        <a href="bistablegripper.html" class="button">Bistable Gripper</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/lkwenda" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/lkwenda" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.instagram.com/luyandokwenda" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="mailto:luyandokwenda@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="mailto:kwenda@alumni.upenn.edu" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>Luyando Kwenda © 2025 </li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
