@@ -22,6 +22,7 @@
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="projects.html">Projects</a></li>
+                                <li><a href="resume.html">Résumé</a></li>
                                 
                             </ul>
                         </div>
@@ -83,9 +84,71 @@
                     <h3 class="subtitle">Results and Analysis</h3>
                     <p>
                         Our model suggested 17 rubber bands in series and 5 in parallel as the optimal setup. However, real-world test results showed a slight discrepancy, as the system did not reach the expected maximum acceleration due to underestimated stiffness. Future improvements could incorporate loss factors at a molecular level for better accuracy.
-                    <p>
-                        Stay tuned! Exciting video and detailed write-up documentation are on their way!
                     </p>
+
+                    <h3 class="subtitle">Report</h3>
+                   
+                    <iframe 
+                    src="PDFs\Final_Lab1_Report_Group14.pdf" 
+                    width="100%" 
+                    height="600px"
+                    style="border: none;">
+                    </iframe>
+            
+
+                    <h3 class="subtitle">MATLAB Code</h3>
+                    <p class="text-gray-600">Below are the MATLAB scripts used in this project:</p>
+
+                    <div id="matlab-container" class="space-y-8"></div>
+
+                    <script>
+                    // List of MATLAB files to display
+                    const matlabFiles = [
+                        'fitplotdata.m',
+                        'getData.m',
+                        'integrals_rubber_bandPS.m',
+                        'match_configPS.m',
+                        'plotDataPS.m'
+                    ];
+
+                    const container = document.getElementById('matlab-container');
+
+                    matlabFiles.forEach(file => {
+                        const filePath = 'Code/Bungee/' + file;
+                        const section = document.createElement('div');
+
+                        section.innerHTML = `
+                        <h4 class="font-medium text-gray-300 mb-2">${file}</h4>
+                        <pre class="w-full max-w-full max-h-96 overflow-x-auto overflow-y-auto 
+                                    bg-gray-900 text-green-300 p-4 border border-gray-700 
+                                    rounded-lg shadow-md font-mono text-left whitespace-pre">
+                            <code id="${file.replace('.', '_')}">Loading ${file}...</code>
+                        </pre>
+                        `;
+                        container.appendChild(section);
+
+                        fetch(filePath)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Could not load ' + file);
+                            return response.text();
+                        })
+                        .then(data => {
+                            const pre = document.getElementById(file.replace('.', '_'));
+                            pre.textContent = data;
+                        })
+                        .catch(err => {
+                            document.getElementById(file.replace('.', '_')).textContent =
+                            '⚠️ Unable to display ' + file;
+                            console.error(err);
+                        });
+                    });
+                    </script>
+
+
+
+
+
+                
 
                     <div class="project-navigation" style="display: flex; justify-content: space-between;">
                         <a href="stirlingengine.html" class="button">Stirling Engine</a>
@@ -100,7 +163,6 @@
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/lkwenda" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
                 <li><a href="https://github.com/lkwenda" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="https://www.instagram.com/luyandokwenda" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                 <li><a href="mailto:luyandokwenda@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
                 <li><a href="mailto:kwenda@alumni.upenn.edu" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
             </ul>
@@ -118,6 +180,10 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+        <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-matlab.js"></script>
 
 </body>
 </html>
