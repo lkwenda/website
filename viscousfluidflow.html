@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Viscous Fluid Flow — Luyando Kwenda</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="projects.html">Projects</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="resume.html">Résumé</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+
+                    <h2 style="text-align:center;">Viscous Fluid Flow</h2>
+                    <p style="text-align:center; color:gray;">
+                        Graduate coursework exploring analytical and computational approaches to laminar viscous flows,
+                        boundary-layer theory, and Stokes-flow approximations.
+                    </p>
+                    <hr>
+
+                    <!-- Homework 0 -->
+                    <h3 class="subtitle">Flow Classification and Dimensional Analysis</h3>
+                    <p>
+                        This introductory assignment reinforced fundamental distinctions between inviscid and viscous regimes,
+                        using scaling arguments and non-dimensionalization to identify dominant forces across Reynolds-number ranges.
+                        It emphasized how viscous terms become significant in the near-wall region and provided a foundation
+                        for interpreting later laminar-flow analyses.
+                    </p>
+                    <iframe src="PDFs/Viscous_Fluid_Flow_Homework_0.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Homework 1 -->
+                    <h3 class="subtitle">Plane Poiseuille and Couette Flow</h3>
+                    <p>
+                        Analytical derivation and comparison of steady incompressible flow between parallel plates,
+                        including both pressure-driven (Poiseuille) and shear-driven (Couette) configurations.
+                        Solutions were obtained from simplified Navier–Stokes equations under fully developed assumptions,
+                        and validated using MATLAB plotting of velocity profiles and shear stresses.
+                        The analysis illustrated how velocity distributions evolve with channel aspect ratio and wall motion.
+                    </p>
+                    <iframe src="PDFs/Viscous_Fluid_Flow_Homework_1.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Homework 2 -->
+                    <h3 class="subtitle">Boundary Layer on a Flat Plate</h3>
+                    <p>
+                        Focused on deriving and numerically evaluating the Blasius boundary-layer solution.
+                        The study demonstrated how streamwise velocity gradients and wall shear stress vary with Reynolds number,
+                        highlighting viscous diffusion’s role in momentum transfer. MATLAB-based discretization
+                        was employed to approximate the similarity ODE and visualize boundary-layer growth.
+                    </p>
+                    <iframe src="PDFs/Viscous_Fluid_Flow_Homework_2.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Homework 3 -->
+                    <h3 class="subtitle">Creeping Flow around a Sphere</h3>
+                    <p>
+                        Examined Stokes flow at very low Reynolds numbers using the streamfunction–vorticity formulation in spherical coordinates.
+                        The derivation led to the biharmonic streamfunction equation \(E^4 \psi = 0\),
+                        with analytical solutions obtained through separation of variables and application of no-slip and far-field conditions.
+                        Velocity components and pressure distribution were recovered to quantify drag at \(Re \ll 1\).
+                    </p>
+                    <iframe src="PDFs/Viscous_Fluid_Flow_Homework_3.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Final Project -->
+                    <h3 class="subtitle">Final Project — CPU Heat Sink CFD Analysis</h3>
+                    <p>
+                        A collaborative project applying the Navier–Stokes and energy equations to model forced convection in a
+                        plate-fin CPU heat sink using <strong>ANSYS Fluent</strong>. The study explored how the
+                        Nusselt–Reynolds number correlation varies across laminar flow regimes (\(Re = 170–800\)),
+                        verifying accuracy against flat-plate theory before extending to complex 3D geometries.
+                        Results established a geometry-specific power-law relation \(Nu = C Re^a\) for predicting thermal performance,
+                        linking theoretical viscous-flow principles with real-world thermal management.
+                    </p>
+                    <iframe src="PDFs/Viscous_Fluid_Flow_Final_Report.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <div class="project-navigation" style="text-align: left;">
+                        <a href="numerical methods.html" class="button">Numerical Methods</a>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/lkwenda" class="icon brands fa-linkedin"></a></li>
+                <li><a href="https://github.com/lkwenda" class="icon brands fa-github"></a></li>
+                <li><a href="mailto:luyandokwenda@gmail.com" class="icon fas fa-envelope"></a></li>
+                <li><a href="mailto:kwenda@alumni.upenn.edu" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>Luyando Kwenda © 2025</li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
