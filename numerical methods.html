@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Numerical Methods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="projects.html">Projects</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="resume.html">Résumé</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <article id="main">
+            <section class="wrapper style5">
+                <div class="inner">
+                    <h2 style="text-align:center;">Numerical Methods in Engineering</h2>
+                    <p style="text-align:center; color:gray;">Core assignments exploring stability, convergence, and approximation techniques.</p>
+
+                    <hr>
+
+                    <!-- Section 1 -->
+                    <h3 class="subtitle">Finite Difference and LU Decomposition</h3>
+                    <p>
+                        This assignment implemented the Doolittle LU decomposition algorithm to solve 1D and 2D boundary-value problems derived from finite difference approximations.
+                        The focus was on verifying correctness against MATLAB’s <code>lu</code> solver and analyzing computational scaling with system size.
+                        The project included temperature distribution plots and time-complexity analysis of the solver.
+                    </p>
+
+                    <iframe src="PDFs/ENM_HW2_Newtons_Method.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Section 2 -->
+                    <h3 class="subtitle">Implicit Euler and Newton–Raphson Integration</h3>
+                    <p>
+                        This work explored nonlinear time integration of the Lotka–Volterra predator–prey equations using the implicit Euler method.
+                        A Newton–Raphson iteration scheme was implemented to handle nonlinearity in the backward Euler formulation.
+                        The analysis included phase-space trajectories, global error comparisons, and a discussion of the trade-off between accuracy and stability.
+                    </p>
+
+                    <iframe src="PDFs/ENM_502_HW_3.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <!-- Section 3 -->
+                    <h3 class="subtitle">Finite Element Method (FEM)</h3>
+                    <p>
+                        This assignment involved the implementation of the 1D Galerkin Finite Element Method to solve a steady-state diffusion problem.
+                        Element stiffness matrices were assembled using 3-point Gaussian quadrature, and the effect of mesh refinement on accuracy was examined.
+                        The results showed excellent agreement with analytical solutions, validating the weak formulation and numerical integration.
+                    </p>
+
+                    <iframe src="PDFs/ENM_502_HW4_FEM.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+                    <hr>
+
+                    <h2 style="text-align:center;">Numerical Methods for PDEs</h2>
+                    <p style="text-align:center; color:gray;">Finite difference and time-marching schemes for diffusion and wave equations.</p>
+
+                    <h3 class="subtitle">Heat Equation — Explicit and Implicit Schemes</h3>
+                    <p>
+                        This assignment implemented finite-difference methods for solving the 1-D heat equation 
+                        \( u_t = \alpha u_{xx} \) using both explicit (Forward Euler) and implicit (Crank–Nicolson) time-marching schemes. 
+                        MATLAB code was written to compare stability and accuracy under varying spatial and temporal step sizes.  
+                        The report includes analytical vs numerical comparisons, stability analysis using the CFL condition, and surface plots of \( u(x,t) \) evolution.
+                    </p>
+
+                    <iframe src="PDFs/ENM_5220_HW1.pdf" width="100%" height="600px" style="border:none;"></iframe>
+
+
+
+                    <div class="project-navigation" style="display: flex; justify-content: space-between;">
+                        <a href="cadencemclaren.html" class="button">Cadence-McLaren</a>
+                        <a href="viscousfluidflow.html" class="button">Fluid Flow</a>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/lkwenda" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/lkwenda" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:luyandokwenda@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="mailto:kwenda@alumni.upenn.edu" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>Luyando Kwenda © 2025</li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
